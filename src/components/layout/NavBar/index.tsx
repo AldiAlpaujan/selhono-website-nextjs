@@ -2,11 +2,12 @@ import Image from "next/image";
 import assetsImage from "@/utils/constants";
 import SectionLayout from "../SectionLayout";
 import HamburgerMenu from "@/components/elements/HamburgerMenu";
+import NavBarMenu from "@/components/elements/NavBarMenu";
 
 const NavBar = () => {
     return (
-        <nav className="w-full border-b">
-            <SectionLayout className="py-6 h-full flex justify-between items-center">
+        <nav className="w-full bg-transparent fixed">
+            <SectionLayout className="py-6 h-fit bg-white flex justify-between items-center">
                 <div>
                     <Image
                         className="h-auto w-auto"
@@ -17,7 +18,8 @@ const NavBar = () => {
                         priority />
                 </div>
                 <div>
-                    <HamburgerMenu />
+                    <NavBarMenu className="hidden lg:block" />
+                    <HamburgerMenu className="block lg:hidden" />
                 </div>
             </SectionLayout>
         </nav>

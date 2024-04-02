@@ -2,7 +2,7 @@
 
 import NavBarContextProvider, { NavBarContext } from "@/context/NavBarContext";
 import NavBar from "../NavBar";
-import { ReactNode, useContext } from "react";
+import { ReactNode, useContext, useEffect } from "react";
 
 type AppShellProps = {
     children: ReactNode
@@ -19,11 +19,21 @@ const AppShell = ({ children }: AppShellProps) => {
 }
 
 const AppContent = ({ children }: AppShellProps) => {
-    const { isOpen } = useContext(NavBarContext)!;
+    const { isOpen, setIsOpen } = useContext(NavBarContext)!;
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            const width = window.innerWidth;
+            if (width >= 1024) setIsOpen(false);
+        });
+    }, [setIsOpen]);
+
     return (
-        <main className={`h-screen w-full ${isOpen && "overflow-hidden"}`}>
+        <main className={`h-screen w-full ${isOpen ? "overflow-hidden" : ""}`}>
             <NavBar />
-            {children}
+            <div className="pt-[73px]">
+                {children}
+            </div>
         </main>
     );
 }

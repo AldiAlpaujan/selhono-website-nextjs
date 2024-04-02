@@ -4,7 +4,7 @@ import { useContext, useEffect, useRef } from 'react';
 import './hamburger-menu.css';
 import { NavBarContext } from '@/context/NavBarContext';
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ className }: { className?: string }) => {
     const btnRef = useRef<HTMLButtonElement>(null);
     const { isOpen, setIsOpen } = useContext(NavBarContext)!;
 
@@ -20,7 +20,7 @@ const HamburgerMenu = () => {
     }, [isOpen]);
 
     return (
-        <div className='h-full flex items-center justify-center'>
+        <div className={`h-full flex items-center justify-center ${className}`}>
             <button ref={btnRef} onClick={() => setIsOpen(!isOpen)} className="w-6 h-5 bg-white relative">
                 <span className="burger-line top-0 transition-all duration-500" />
                 <span className="burger-line transition-all duration-500" />

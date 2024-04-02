@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#C76904",
+      },
       fontFamily: {
         'dm-serif-display': ['var(--font-dm-serif-display)'],
         jost: ['var(--font-jost)'],
