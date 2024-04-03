@@ -8,12 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       colors: {
-        primary: "#C76904",
+        primary: {
+          dark: "#C76904",
+          light: "#CDA274",
+        },
+        title: "#292F36",
+        body: "#4D5053",
+      },
+      boxShadow: {
+        "btn-shadow": "0 10px 20px 0px rgba(192, 192, 192, 0.35)",
       },
       fontFamily: {
-        'dm-serif-display': ['var(--font-dm-serif-display)'],
-        jost: ['var(--font-jost)'],
+        "dm-serif-display": ["var(--font-dm-serif-display)"],
+        jost: ["var(--font-jost)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

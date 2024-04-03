@@ -17,7 +17,6 @@ const jost = Jost({
 
 
 export const metadata: Metadata = {
-  title: "SELHONO",
   description: "latihan membuat website dengan next-js",
 };
 

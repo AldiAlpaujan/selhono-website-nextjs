@@ -13,7 +13,7 @@ const NavBarMenu = ({ className }: { className?: string }) => {
             <ul className="flex items-center gap-x-7">
                 {menu.map((value, i) => (
                     <li key={i} className="text-base font-medium transition-all duration-300 
-                        hover:text-primary hover:cursor-pointer">
+                        hover:text-primary-dark hover:cursor-pointer">
                         {value}
                     </li>
                 ))}

@@ -24,12 +24,13 @@ const AppContent = ({ children }: AppShellProps) => {
     useEffect(() => {
         window.addEventListener('resize', () => {
             const width = window.innerWidth;
-            if (width >= 1024) setIsOpen(false);
+            console.log(width);
+            if (width >= 1024) setIsOpen(false)
         });
     }, [setIsOpen]);
 
     return (
-        <main className={`h-screen w-full ${isOpen ? "overflow-hidden" : ""}`}>
+        <main className={`h-screen w-full ${isOpen && "overflow-hidden"}`}>
             <NavBar />
             <div className="pt-[73px]">
                 {children}
