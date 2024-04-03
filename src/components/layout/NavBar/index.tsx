@@ -6,7 +6,7 @@ import NavBarMenu from "@/components/elements/NavBarMenu";
 
 const NavBar = () => {
     return (
-        <nav className="w-full bg-transparent fixed">
+        <nav className="w-full bg-transparent fixed z-[9999]">
             <SectionLayout className="py-6 h-fit bg-white flex justify-between items-center">
                 <div>
                     <Image

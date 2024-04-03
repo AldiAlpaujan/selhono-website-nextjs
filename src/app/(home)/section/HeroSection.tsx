@@ -31,14 +31,15 @@ const HeroSection = () => {
 
     return (
         <SectionLayout>
-            <div ref={imgRef} className="relative w-full h-60 bg-white overflow-hidden rounded-tl-[40px] rounded-br-[40px] opacity-0 scale-110 transition-all duration-500 md:mt-5 md:h-[400px] md:rounded-tl-[60px] md:rounded-br-[60px] lg:h-[544px]">
+            <div ref={imgRef} className="relative w-full h-60 bg-white overflow-hidden rounded-tl-[40px] rounded-br-[40px] opacity-0 scale-110 transition-all duration-500 md:mt-5 md:h-[400px] md:rounded-tl-[60px] md:rounded-br-[60px] lg:h-[544px] 2xl:h-[600px]">
                 <Image
                     className="absolute z-1 w-full h-full object-cover filter brightness-95"
                     src={assetsImage.heroImage}
                     alt="Hero Image"
                     width={1000}
-                    height={1000} />
-                <div className="absolute z-2 py-6 px-4 max-w-[80%] text-white md:py-10 md:px-6 sm:max-w-[60%] lg:py-14 lg:px-[26px] lg:max-w-[70%] ">
+                    height={1000}
+                    priority />
+                <div className="absolute z-2 py-6 px-4 max-w-[80%] text-white md:py-10 md:px-6 sm:max-w-[60%] lg:py-14 lg:px-[26px] lg:max-w-[70%] 2xl:px-8">
                     <h1 ref={headerRef} className="-translate-x-10 font-dm-serif-display text-xl mb-1 opacity-0 transition-all duration-500 sm:text-2xl md:text-4xl md:mb-3 lg:text-[46px] lg:leading-none lg:mb-3 xl:text-[60px] xl:leading-[1.10]">
                         Let's make your home beautiful together
                     </h1>

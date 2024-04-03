@@ -24,7 +24,6 @@ const AppContent = ({ children }: AppShellProps) => {
     useEffect(() => {
         window.addEventListener('resize', () => {
             const width = window.innerWidth;
-            console.log(width);
             if (width >= 1024) setIsOpen(false)
         });
     }, [setIsOpen]);
