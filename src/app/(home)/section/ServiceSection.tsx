@@ -15,7 +15,7 @@ async function getData(): Promise<Service[]> {
 const ServiceSection = async () => {
     const services = await getData();
     return (
-        <SectionLayout className="mt-10 pb-20">
+        <SectionLayout className="mt-10">
             <div className="w-full flex flex-wrap justify-center">
                 {services.map((value) => (
                     <ServiceCard key={value.id} service={value} />
